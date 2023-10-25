@@ -1,28 +1,28 @@
+:root {
+  --green: #39b626;
+  --blackBG: #211d1b;
+}
+
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
-    font-size: 16px; /* 1rem = 10px */
-    margin: 0;
-    padding: 15px 20px;
-    min-height: 99%;
-    width: 100%;
-    min-width: 550px;
-   color: #39b626;
-    background: #211D1B;
-    font-family: cursor, monospace;
-    overflow-x: hidden;
-  }
+  font-size: 16px; /* 1rem = 10px */
+  padding: 10px;
+  color: var(--green);
+  background: var(--blackBG);
+  font-family: cursor, monospace;
+  overflow-x: hidden;
+}
 
- table{
-    border: solid #cec4be;
- }
- 
+table {
+  border: dashed var(--green);
+}

@@ -1,5 +1,5 @@
 :root {
-  --green: #39b626;
+  --green: #2b891c;
   --blackBG: #211d1b;
 }
 
@@ -23,6 +23,32 @@ body {
   overflow-x: hidden;
 }
 
-table {
-  border: dashed var(--green);
+h1{
+  text-align: center;
+  text-decoration: underline;
 }
+
+table{
+  border: 1px dashed var(--green);
+  margin: 0 auto;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: #363230;
+}
+
+th, td {
+  border: 1px dashed var(--green); /* Establece el borde de las celdas */
+  padding: 8px;
+  text-align: left;
+}
+
+.inventory-form-style{
+  margin: 25px;
+}
+
+
+
+

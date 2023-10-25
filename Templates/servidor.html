@@ -9,7 +9,7 @@
   <body>
     <h1>Gestión de Inventario</h1>
 
-    <form id="inventory-tab-form" class="inventory-style-form">
+    <form id="inventory-tab-form" class="inventory-form-style">
 
         <label for="product-name">Nombre: </label>
         <input type="text" id="product-name" required>
@@ -20,17 +20,16 @@
         <button type="submit" id="product-form-event">Agregar Producto</button>
     </form>
 
-    <table id="inventory-table" class="inventory-table-style">
-        <tr>
-            <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-
-        <tbody id="clean-table"></tbody>
-
+    <table id="test" class="inventory-table-style">
+      <tr>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+      
     </table>
+
     <script src="/Scripts/main.js" type="module"></script>
   </body>
 </html>

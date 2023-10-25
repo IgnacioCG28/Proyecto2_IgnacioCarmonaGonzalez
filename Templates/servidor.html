@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventario</title>
-    <link rel="stylesheet" href="/Styles/servidor.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/Styles/servidor.css" />
+  </head>
+  <body>
+    <h1>Gestión de Inventario</h1>
+
+    <form id="inventory-tab-form" class="inventory-style-form">
+
+        <label for="product-name">Nombre: </label>
+        <input type="text" id="product-name" required>
+        <label for="product-qty">Cantidad: </label>
+        <input type="number" id="product-qty" required>
+        <label for="product-price">Precio: </label>
+        <input type="number" step="0.01" id="product-price" required>
+        <button type="submit" id="product-form-event">Agregar Producto</button>
+    </form>
+
     <table id="inventory-table" class="inventory-table-style">
         <tr>
             <th>Nombre</th>
@@ -18,6 +31,6 @@
         <tbody id="clean-table"></tbody>
 
     </table>
-    <script src="/Scripts/main.js"></script>
-</body>
+    <script src="/Scripts/main.js" type="module"></script>
+  </body>
 </html>

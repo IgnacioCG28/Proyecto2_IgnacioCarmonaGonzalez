@@ -40,7 +40,7 @@ export const listProducts = () => {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Eliminar";
     deleteButton.addEventListener("click", () => {
-      if (confirm(`¿Estás seguro de borrar?`)) {
+      if (confirm(`¿Estás seguro de borrar el item?`)) {
         const index = inventory.findIndex((product) => product.id === item.id);
 
         if (index !== -1) {

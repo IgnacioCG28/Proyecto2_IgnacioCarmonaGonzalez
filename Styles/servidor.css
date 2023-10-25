@@ -1,0 +1,30 @@
+/*Cambios generales/globales*/
+body,
+html {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "W95FA";
+  src: url(/Assets/Fonts/W95FA/W95FA.otf);
+}
+
+body {
+  font-size: 16px; /* 1rem = 10px */
+  font-family: "W95FA", "Times New Roman";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

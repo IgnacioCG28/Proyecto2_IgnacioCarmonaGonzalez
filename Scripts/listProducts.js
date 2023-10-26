@@ -3,6 +3,7 @@ import { inventory } from "./products.js";
 export const listProducts = () => {
   const tabla = document.getElementById("test");
 
+  // Con esto borra resetea la tabla causado por la llamada del método pero sin borrar los TH
   while (tabla.rows.length > 1) {
     tabla.deleteRow(1);
   }

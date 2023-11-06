@@ -1,7 +1,9 @@
 import { inventory } from "./products.js";
+import { deleteProduct } from "./deleteButton.js";
+import { editProduct } from "./editButton.js";
 
 export const listProducts = () => {
-  const tabla = document.getElementById("test");
+  const tabla = document.getElementById("table-data");
 
   // Con esto borra resetea la tabla causado por la llamada del método pero sin borrar los TH
   while (tabla.rows.length > 1) {
@@ -19,7 +21,7 @@ export const listProducts = () => {
     cellCantidad.innerHTML = item.cantidad;
     cellPrecio.innerHTML = `${item.precio}€`;
 
-    // Crear botón de editar
+    /* Crear botón de editar
     const editButton = document.createElement("button");
     editButton.textContent = "Editar";
     editButton.addEventListener("click", () => {
@@ -35,21 +37,32 @@ export const listProducts = () => {
       if (!isNaN(change) && change > 0) {
         cellPrecio.textContent = `${change}€`;
       }
-    });
+    });*/
+
+     // Crear botón de editar
+  const editButton = document.createElement("button");
+  editButton.textContent = "Editar";
+  editButton.addEventListener("click", () => {
+    const newName = prompt("Nombre");
+    const newQuantity = prompt("Cantidad");
+    const newPrice = prompt("Precio");
+
+    if (newName !== null && newQuantity !== null && newPrice !== null) {
+      editProduct(item, newName, newQuantity, newPrice); // Llama a la función editItem
+    }
+  });
 
     // Crear botón de eliminar
     const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Eliminar";
-    deleteButton.addEventListener("click", () => {
-      if (confirm(`¿Estás seguro de borrar el item?`)) {
-        const index = inventory.findIndex((product) => product.id === item.id);
+        deleteButton.innerHTML = "Eliminar";
+        deleteButton.className = "delete-button";
+     
+        deleteButton.addEventListener("click", () => {
+          if (confirm(`¿Estás seguro de borrar el item?`)) {
+            deleteProduct(item); // Llama a la función.
+          }           
+        });
 
-        if (index !== -1) {
-          inventory.splice(index, 1);
-        }
-      }
-      listProducts();
-    });
 
     cellAcciones.appendChild(editButton);
     cellAcciones.appendChild(deleteButton);

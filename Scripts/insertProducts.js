@@ -26,7 +26,7 @@ export const insertProducts = () => {
       inventory.push(newProduct);
 
       //Reseteamos tabla
-      const table = document.getElementById("test");
+      const table = document.getElementById("table-data");
 
       while (table.rows.length > 1) {
         table.deleteRow(1);

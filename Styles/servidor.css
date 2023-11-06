@@ -84,3 +84,12 @@ th, td {
 .inventory-form-style{
   margin: 25px;
 }
+
+.delete-button{
+  color: rgb(127, 0, 0);
+  background-color: rgb(47, 1, 1);
+}
+
+.delete-button:hover{
+  background-color: red;
+}

@@ -5,7 +5,7 @@ const getRandomQuantity = () => {
   };
 
   const getRandomPrice = () => {
-    return Math.floor(Math.random() * 500000) + 1;
+    return Math.floor(Math.random() * 500) + 1;
   };
 
   const inventory = [

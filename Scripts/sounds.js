@@ -16,8 +16,8 @@ export function playRandomSound() {
 }
 
 function scheduleSoundPlayback() {
-  // Define el porcentaje de probabilidad (por ejemplo, 20%)
-  const probability = 20;
+  // Define el porcentaje de probabilidad (por ejemplo, 40%)
+  const probability = 40;
   const randomChance = Math.random() * 100;
 
   if (randomChance < probability) {

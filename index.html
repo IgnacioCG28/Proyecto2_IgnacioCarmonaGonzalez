@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
+    <label class="toggle">
+      <input class="toggle-checkbox" type="checkbox" id="sound-toggle">
+      <div class="toggle-switch"></div>
+      <span class="toggle-label">Music</span>
+    </label>
+
     <a href="/Templates/cliente.html">
       <img src="/Assets/Icons/cliente.jpg" alt="cliente" class="icons" />
       <h2>Cliente</h2>
@@ -17,5 +23,10 @@
       <img src="/Assets/Icons/servidor.jpg" alt="servidor" class="icons" />
       <h2>Servidor</h2>
     </a>
+
+    <audio id="music">
+      <source src="/Assets/Music/relax theme.mp3" type="audio/mpeg">
+    </audio>
+    <script src="/Scripts/index.js"></script>
   </body>
 </html>

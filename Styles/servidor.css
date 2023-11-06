@@ -23,6 +23,42 @@ body {
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+  color: #2b891c;
+  position: absolute;
+  top: 5px;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+}
+
+label{
+  margin: 5px;
+}
+
+input{
+  color: var(--green);
+  background-color: #2f2926;
+  border: none;
+}
+
+button{
+  background-color: #211d1b;
+  color: var(--green);
+  border: dashed;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #0f340a;
+}
+
 h1{
   text-align: center;
   text-decoration: underline;
@@ -48,7 +84,3 @@ th, td {
 .inventory-form-style{
   margin: 25px;
 }
-
-
-
-

@@ -2,15 +2,27 @@ import { inventory } from "./products.js";
 import { deleteProduct } from "./deleteButton.js";
 import { editProduct } from "./editButton.js";
 
-export const listProducts = () => {
-  const tabla = document.getElementById("table-data");
+export function searchItem() {
+  const searchInput = document.getElementById("searchItem");
+  const searchText = searchInput.value.toLowerCase();
 
-  // Con esto borra resetea la tabla causado por la llamada del método pero sin borrar los TH
+  const searchResults = inventory.filter((item) => {
+    return item.nombre.toLowerCase().includes(searchText);
+  });
+
+  displaySearchResults(searchResults);
+}
+
+function displaySearchResults(results) {
+  const tabla = document.getElementById("table-data");
+  
+  // Borra la tabla actual
   while (tabla.rows.length > 1) {
     tabla.deleteRow(1);
   }
 
-  inventory.forEach((item) => {
+  // Vuelve a insertar los resultados de la búsqueda
+  results.forEach((item) => {
     const row = tabla.insertRow();
     const cellNombre = row.insertCell(0);
     const cellCantidad = row.insertCell(1);
@@ -20,8 +32,8 @@ export const listProducts = () => {
     cellNombre.innerHTML = item.nombre;
     cellCantidad.innerHTML = item.cantidad;
     cellPrecio.innerHTML = `${item.precio}€`;
-
-     // Crear botón de editar
+    
+    // Crear botón de editar
   const editButton = document.createElement("button");
   editButton.textContent = "Editar";
   editButton.className = "edit-button";
@@ -31,7 +43,7 @@ export const listProducts = () => {
     const newPrice = prompt("Precio");
 
     if (newName !== null && newQuantity !== null && newPrice !== null) {
-      editProduct(item, newName, newQuantity, newPrice); // Llama a la función editItem
+      editProduct(item, newName, newQuantity, newPrice); // Llama a la función
     }
   });
 
@@ -50,4 +62,5 @@ export const listProducts = () => {
     cellAcciones.appendChild(editButton);
     cellAcciones.appendChild(deleteButton);
   });
-};
+}
+

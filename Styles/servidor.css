@@ -6,7 +6,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-}
+ }
 
 *,
 *:before,
@@ -48,10 +48,6 @@ input{
 }
 
 button{
-  background-color: #211d1b;
-  color: var(--green);
-  border: dashed;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -92,4 +88,12 @@ th, td {
 
 .delete-button:hover{
   background-color: red;
+}
+
+.edit-button{
+  color: rgb(6, 6, 106);
+}
+
+.search-input{
+  background-color: #363230;
 }

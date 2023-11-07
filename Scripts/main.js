@@ -1,3 +1,7 @@
+/**
+ *  Autor: Ignacio Carmona González
+ *  Github: https://github.com/IgnacioCG28/Proyecto2_IgnacioCarmonaGonzalez.git
+ */
 import { listProducts } from "./listproducts.js";
 import { insertProducts } from "./insertProducts.js";
 import { searchItem } from "./search.js";

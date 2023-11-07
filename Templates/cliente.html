@@ -1,72 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>My Online Shop</title>
+    <style>
+      body{
+        background-image: url(/Assets/BG/UConstruct.jpeg);
+        background-repeat: no-repeat;
+      }
+      /*Icono sonido*/
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #56c080;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+    </style>
   </head>
-  <body class="bg-gray-100 h-screen">
-    <header class="bg-white p-4 shadow-md">
-      <div class="container mx-auto">
-        <a href="#" class="font-bold text-lg">My Online Shop</a>
-        <nav class="flex justify-end">
-          <a href="#" class="px-2 py-1 hover:bg-gray-300">Shop</a>
-          <a href="#" class="px-2 py-1 hover:bg-gray-300">About</a>
-          <a href="#" class="px-2 py-1 hover:bg-gray-300">Contact</a>
-        </nav>
-      </div>
-    </header>
-    <section class="container mx-auto py-6">
-      <h1 class="text-xl font-bold mb-4">Featured Products</h1>
-      <div class="flex flex-wrap -mx-2">
-        <div class="w-1/3 px-2 mb-4">
-          <div class="bg-white p-4 shadow-md">
-            <img src="https://via.placeholder.com/150x150" alt="Product Image" class="w-full mb-2" />
-            <h3 class="font-bold text-lg mb-1">Product Name</h3>
-            <p class="text-gray-600">$20.00</p>
-            <button class="bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
-          </div>
-        </div>
-        <div class="w-1/3 px-2 mb-4">
-          <div class="bg-white p-4 shadow-md">
-            <img src="https://via.placeholder.com/150x150" alt="Product Image" class="w-full mb-2" />
-            <h3 class="font-bold text-lg mb-1">Product Name</h3>
-            <p class="text-gray-600">$20.00</p>
-            <button class="bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
-          </div>
-        </div>
-        <div class="w-1/3 px-2 mb-4">
-          <div class="bg-white p-4 shadow-md">
-            <img src="https://via.placeholder.com/150x150" alt="Product Image" class="w-full mb-2" />
-            <h3 class="font-bold text-lg mb-1">Product Name</h3>
-            <p class="text-gray-600">$20.00</p>
-            <button class="bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
-          </div>
-        </div>
-        <div class="w-1/3 px-2 mb-4">
-          <div class="bg-white p-4 shadow-md">
-            <img src="https://via.placeholder.com/150x150" alt="Product Image" class="w-full mb-2" />
-            <h3 class="font-bold text-lg mb-1">Product Name</h3>
-            <p class="text-gray-600">$20.00</p>
-            <button class="bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
-          </div>
-        </div>
-        <div class="w-1/3 px-2 mb-4">
-          <div class="bg-white p-4 shadow-md">
-            <img src="https://via.placeholder.com/150x150" alt="Product Image" class="w-full mb-2" />
-            <h3 class="font-bold text-lg mb-1">Product Name</h3>
-            <p class="text-gray-600">$20.00</p>
-            <button class="bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="bg-white p-4">
-      <div class="container mx-auto">
-        <p class="text-center text-gray-600">Copyright &copy; My Online Shop</p>
-      </div>
-    </footer>
+  <body>
+    <a href="/index.html">Salir</a>
+    <label class="toggle">
+      <input class="toggle-checkbox" type="checkbox" id="sound-toggle">
+      <div class="toggle-switch"></div>
+      <span class="toggle-label">Music</span>
+    </label>
+    <audio id="music">
+      <source src="/Assets/Music/catalog.mp3" type="audio/mpeg">
+    </audio>
+    <script src="/Scripts/index.js"></script>
   </body>
 </html>

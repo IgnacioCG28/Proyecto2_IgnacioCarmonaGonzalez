@@ -63,6 +63,8 @@ h2:hover{
   background-color: rgb(4, 4, 132);
 }
 
+
+/*Icono sonido*/
 .toggle {
   cursor: pointer;
   display: inline-block;
@@ -80,6 +82,7 @@ h2:hover{
   position: relative;
   vertical-align: middle;
   transition: background 0.25s;
+  opacity: 50%;
 }
 .toggle-switch:before, .toggle-switch:after {
   content: "";
@@ -102,6 +105,7 @@ h2:hover{
 }
 .toggle-checkbox:checked + .toggle-switch {
   background: #56c080;
+  opacity: 50%;
 }
 .toggle-checkbox:checked + .toggle-switch:before {
   left: 30px;

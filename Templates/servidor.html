@@ -9,22 +9,28 @@
   <body>
     <h1 class="glow">Gestión de Inventario</h1>
     <a href="/index.html" class="text glow">Salir</a>
-    
 
     <form id="inventory-tab-form" class="inventory-form-style glow">
-
-        <label for="product-name">Nombre: </label>
-        <input type="text" id="product-name" required>
-        <label for="product-qty">Cantidad: </label>
-        <input type="number" id="product-qty" required>
-        <label for="product-price">Precio: </label>
-        <input type="number" step="0.01" id="product-price" required>
-        <button type="submit" id="product-form-event" class="add-product">Agregar Producto</button>
+      <label for="product-name">Nombre: </label>
+      <input type="text" id="product-name" required />
+      <label for="product-qty">Cantidad: </label>
+      <input type="number" id="product-qty" required />
+      <label for="product-price">Precio: </label>
+      <input type="number" step="0.01" id="product-price" required />
+      <button type="submit" id="product-form-event" class="add-product">
+        Agregar Producto
+      </button>
     </form>
-    <div class="buscador">
-      <input type="text" name="search" id="searchItem" class="search-input" placeholder="Buscar item...">
-    </div>
 
+    <div class="buscador">
+      <input
+        type="text"
+        name="search"
+        id="searchItem"
+        class="search-input"
+        placeholder="Buscar item..."
+      />
+    </div>
 
     <table id="table-data" class="inventory-table-style glow">
       <tr>
@@ -42,14 +48,13 @@
     </table>
 
     <audio id="background-audio" controls style="display: none">
-      <source src="/Assets/Sound/Cave_Sound00.mp3" type="audio/mpeg">
-      <source src="/Assets/Sound/Cave_Sound01.mp3" type="audio/mpeg">
-      <source src="/Assets/Sound/Cave_Sound02.mp3" type="audio/mpeg">
-      <source src="/Assets/Sound/Cave_Sound03.mp3" type="audio/mpeg">
-      <source src="/Assets/Sound/Cave_Sound04.mp3" type="audio/mpeg">
-      <source src="/Assets/Sound/Cave_Sound05.mp3" type="audio/mpeg">
+      <source src="/Assets/Sound/Cave_Sound00.mp3" type="audio/mpeg" />
+      <source src="/Assets/Sound/Cave_Sound01.mp3" type="audio/mpeg" />
+      <source src="/Assets/Sound/Cave_Sound02.mp3" type="audio/mpeg" />
+      <source src="/Assets/Sound/Cave_Sound03.mp3" type="audio/mpeg" />
+      <source src="/Assets/Sound/Cave_Sound04.mp3" type="audio/mpeg" />
+      <source src="/Assets/Sound/Cave_Sound05.mp3" type="audio/mpeg" />
     </audio>
-  
 
     <script src="/Scripts/main.js" type="module"></script>
   </body>

@@ -15,7 +15,7 @@ export const insertProducts = () => {
     );
     // Validar campos que no estén vacíos
 
-    if (productName && !isNaN(productQty) && !isNaN(productPrice)) {
+    if (productName && !isNaN(productQty) && !isNaN(productPrice) && productQty > 0 && productPrice > 0) {
       const newProduct = {
         id: inventory.length + 1,
         nombre: productName,

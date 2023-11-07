@@ -33,7 +33,8 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 5px;
+  flex-wrap: wrap;
+  padding: 5px;  
 }
 
 form button{
@@ -50,7 +51,9 @@ input {
   background-color: var(--lightBlack);
   border: none;
   text-shadow: 0 0 5px var(--green);
+  outline-color: var(--green);
 }
+
 
 button {
   cursor: pointer;
@@ -67,6 +70,7 @@ table {
   margin: 0 auto;
   padding: 5px;
   border-collapse: collapse;
+  width: 1000px;
 }
 tr:hover {
   background-color: #0f340a;
@@ -74,13 +78,14 @@ tr:hover {
 
 th {
   background-color: #363230;
+  text-align: center;
 }
 
 th,
 td {
   border: 1px dashed var(--green); /* Establece el borde de las celdas */
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 /*Boton salir*/
@@ -143,7 +148,7 @@ td {
 .search-input {
   background-color: var(--lightBlack);
   width: 150px ;
-  height: 20px;
+  height: 25px;
   text-align: center;
 }
 

@@ -60,7 +60,7 @@ export const listProducts = () => {
   const cellTotalPrecio = rowTotal.insertCell(2);
   const cellTotalAcciones = rowTotal.insertCell(3);
 
-  cellTotalLabel.innerHTML = "Total";
+  cellTotalLabel.innerHTML = "Total Inventario";
   cellTotalCantidad.innerHTML = cantidadTotal;
   cellTotalPrecio.innerHTML = `${precioTotal}€`;
   cellTotalAcciones.innerHTML = "";
